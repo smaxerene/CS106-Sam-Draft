@@ -1,0 +1,33 @@
+﻿<Page x:Class="WpfApp.Views.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Login" Height="1024" Width="1440">
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="78"
+               Source="/Resources/images/NZ Gov Logo.png" Margin="59,56,0,0"/>
+        <Image HorizontalAlignment="Left" Height="83" VerticalAlignment="Top" Width="322" Margin="1056,56,0,0"
+               Source="/Resources/images/NZ Gov.png"/>
+
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Welcome To" VerticalAlignment="Center" Margin="662,172,0,828" Height="24" Width="132" FontFamily="Inter" FontSize="18" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="164" RenderTransformOrigin="3.592,3.258" Margin="644,200,0,0"
+               Source="/Resources/images/My Covid Record Logo.png"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="Wrap" Text="My Covid Record" VerticalAlignment="Top" Margin="349,330,325,0" FontFamily="Inter" Width="766" FontSize="80" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="105" Margin="275,452,0,0" Width="917" TextAlignment="Center"><Run FontSize="20" FontFamily="Inter" Text="Our system is designed to keep track of your Covid vaccine information and help you stay up-to-date. "/><LineBreak/><Run FontSize="20" FontFamily="Inter"/><LineBreak/><Run FontSize="20" FontFamily="Inter"/><LineBreak/><Run FontSize="20" FontFamily="Inter" Text="To get started, please log in or sign up. "/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+
+        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="550,606,0,0" FontFamily="Roboto" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="378" Margin="550,635,0,0" FontFamily="Roboto" FontSize="14" TextChanged="TextBox_TextChanged_2"/>
+        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="550,686,0,0" FontFamily="Roboto" FontSize="24"/>
+        <PasswordBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Margin="550,715,0,0" Height="40"/>
+        <Button Content="Log In" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378" Margin="550,780,0,0" Height="29" Click="Button_Click" Background="#FF3A89FF" FontFamily="Roboto" FontSize="18"/>
+
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Margin="275,899,0,0" Width="917" TextAlignment="Center" FontFamily="Inter" FontSize="18"><Run Text="Thank you for taking the time to protect yourself and your community!"/><LineBreak/><Run/></TextBlock>
+
+
+    </Grid>
+</Page>
