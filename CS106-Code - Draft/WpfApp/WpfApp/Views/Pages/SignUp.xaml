@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SignUp"  Height="1024" Width="1440">
 
-    <Grid RenderTransformOrigin="1,0">
+    <Grid Margin="0,0,-620,-525">
         <Image HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="78"
                Source="/Resources/images/NZ Gov Logo.png" Margin="59,56,0,0"/>
         <Image HorizontalAlignment="Left" Height="83" VerticalAlignment="Top" Width="322" Margin="1056,56,0,0"
@@ -17,7 +17,7 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Welcome To" VerticalAlignment="Center" Margin="663,152,0,848" Height="24" Width="132" FontFamily="Inter" FontSize="18" TextAlignment="Center"/>
         <Image HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="164" RenderTransformOrigin="3.592,3.258" Margin="645,180,0,0"
                Source="/Resources/images/My Covid Record Logo.png"/>
-        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="Wrap" Text="My Covid Record" VerticalAlignment="Top" Margin="350,310,324,0" FontFamily="Inter" Width="766" FontSize="80" TextAlignment="Center"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="My Covid Record" VerticalAlignment="Top" Margin="129,247,0,0" FontFamily="Inter" Width="766" FontSize="80" TextAlignment="Center"/>
 
         <Rectangle Fill="#3A89FF" HorizontalAlignment="Left" Height="344" Margin="328,435,0,0" Stroke="Black" VerticalAlignment="Top" Width="870" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
         <Rectangle Fill="#6194E0" HorizontalAlignment="Left" Height="344" Margin="328,435,0,0" Stroke="Black" VerticalAlignment="Top" Width="245" Opacity="0.8" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
