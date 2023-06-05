@@ -40,14 +40,6 @@ namespace WpfApp.Views.Pages {
     /// </summary>
     public partial class QR_Page : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
-        
-        #line 23 "..\..\..\..\Views\Pages\QR Page.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button HomeButton;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -76,18 +68,6 @@ namespace WpfApp.Views.Pages {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
-            switch (connectionId)
-            {
-            case 1:
-            this.HomeButton = ((System.Windows.Controls.Button)(target));
-            
-            #line 23 "..\..\..\..\Views\Pages\QR Page.xaml"
-            this.HomeButton.Click += new System.Windows.RoutedEventHandler(this.OnClick5);
-            
-            #line default
-            #line hidden
-            return;
-            }
             this._contentLoaded = true;
         }
     }
