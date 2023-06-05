@@ -21,7 +21,7 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for SignUp.xaml
     /// </summary>
-    public partial class SignUp : Page
+    public partial class SignUp : Window
     {
         public SignUp()
         {
@@ -51,17 +51,17 @@ namespace WpfApp1
 
                 if (PasswordPassBox.Password.Length == 0)
                 {
-                    errormessage.Text = "Enter password.";
+                    errormessage.Text = "Enter a password";
                     PasswordPassBox.Focus();
                 }
                 else if (ConfirmPassPassBox.Password.Length == 0)
                 {
-                    errormessage.Text = "Enter Confirm password.";
+                    errormessage.Text = "Enter password to confirm";
                     ConfirmPassPassBox.Focus();
                 }
                 else if (PasswordPassBox.Password != ConfirmPassPassBox.Password)
                 {
-                    errormessage.Text = "Confirm password must be same as password.";
+                    errormessage.Text = "Password not identical";
                     ConfirmPassPassBox.Focus();
                 }
                 else
@@ -78,7 +78,6 @@ namespace WpfApp1
                     errormessage.Text = "You have Registered successfully.";
                     Reset();
                 }
-
             }
         }
 
@@ -108,7 +107,7 @@ namespace WpfApp1
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();
-            Login.Show();
+            login.Show();
             Close();
         }
     }
