@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\App.xaml
-3-1161539794
+6-2113384050
 
-71808675570
+10976064965
 13-1505183044
-Login.xaml;MainWindow.xaml;SignUp.xaml;
+AdminLogin.xaml;Homepage.xaml;Login.xaml;MainWindow.xaml;QRPage.xaml;SignUp.xaml;
 
 False
 

@@ -42,6 +42,9 @@ namespace WpfApp1
                 EmailTextBox.Select(0, EmailTextBox.Text.Length);
                 EmailTextBox.Focus();
             }
+            //full name
+            //username
+            //phone number
             else
             {
                 string fullName = FullNameTextBox.Text;

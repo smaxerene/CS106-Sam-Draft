@@ -55,3 +55,9 @@ C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information Syste
 C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\Homepage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\QRPage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\Homepage.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\QRPage.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\AdminLogin.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\AdminLogin.baml
