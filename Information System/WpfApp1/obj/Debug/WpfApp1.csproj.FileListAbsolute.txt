@@ -36,3 +36,22 @@ C:\Users\Samantha\Documents\GitHub\CS106-Draft\Information System\WpfApp1\obj\De
 C:\Users\Samantha\Documents\GitHub\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
 C:\Users\Samantha\Documents\GitHub\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
 C:\Users\Samantha\Documents\GitHub\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\Login.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\SignUp.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\App.g.cs
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\Login.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\SignUp.baml
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\270233431\OneDrive - UP Education\Desktop\CS106-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.pdb

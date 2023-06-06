@@ -105,7 +105,7 @@ namespace WpfApp1 {
         #line hidden
         
         
-        #line 45 "..\..\SignUp.xaml"
+        #line 52 "..\..\SignUp.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ResetButton;
         
@@ -113,7 +113,7 @@ namespace WpfApp1 {
         #line hidden
         
         
-        #line 46 "..\..\SignUp.xaml"
+        #line 60 "..\..\SignUp.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button Cancel;
         
@@ -121,7 +121,7 @@ namespace WpfApp1 {
         #line hidden
         
         
-        #line 48 "..\..\SignUp.xaml"
+        #line 68 "..\..\SignUp.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button Login;
         
@@ -191,7 +191,7 @@ namespace WpfApp1 {
             case 9:
             this.ResetButton = ((System.Windows.Controls.Button)(target));
             
-            #line 45 "..\..\SignUp.xaml"
+            #line 52 "..\..\SignUp.xaml"
             this.ResetButton.Click += new System.Windows.RoutedEventHandler(this.Reset_Click);
             
             #line default
@@ -200,7 +200,7 @@ namespace WpfApp1 {
             case 10:
             this.Cancel = ((System.Windows.Controls.Button)(target));
             
-            #line 46 "..\..\SignUp.xaml"
+            #line 60 "..\..\SignUp.xaml"
             this.Cancel.Click += new System.Windows.RoutedEventHandler(this.Cancel_Click);
             
             #line default
@@ -209,7 +209,7 @@ namespace WpfApp1 {
             case 11:
             this.Login = ((System.Windows.Controls.Button)(target));
             
-            #line 48 "..\..\SignUp.xaml"
+            #line 68 "..\..\SignUp.xaml"
             this.Login.Click += new System.Windows.RoutedEventHandler(this.Login_Click);
             
             #line default

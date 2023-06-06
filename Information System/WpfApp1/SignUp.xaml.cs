@@ -100,6 +100,8 @@ namespace WpfApp1
         //Cancel
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            Login login = new Login();
+            login.Show();
             Close();
         }
 
