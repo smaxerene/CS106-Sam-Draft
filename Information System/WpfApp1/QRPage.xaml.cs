@@ -24,7 +24,27 @@ namespace WpfApp1
             InitializeComponent();
         }
 
+        //Account 
+        private void btnClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+        }
+
+        private void btnShowPopup_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == btnShowPopup)
+            {
+
+                myPopup.IsOpen = true;
+            }
+        }
+
         private void QR_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Checked(object sender, RoutedEventArgs e)
         {
 
         }

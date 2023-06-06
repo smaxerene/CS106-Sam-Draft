@@ -92,5 +92,5 @@
 
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Margin="285,845,0,0" Width="916" TextAlignment="Center" FontFamily="Inter" FontSize="18" Grid.Column="1"><Run Text="Thank you for taking the time to protect yourself and your community!"/><LineBreak/><Run/></TextBlock>
 
-        </Grid>
+    </Grid>
 </Window>

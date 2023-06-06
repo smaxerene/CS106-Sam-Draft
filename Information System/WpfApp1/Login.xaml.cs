@@ -27,6 +27,7 @@ namespace WpfApp1
             InitializeComponent();
         }
 
+        //Login Button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (textBoxEmail.Text.Length == 0)
@@ -77,11 +78,27 @@ namespace WpfApp1
             Close();
         }
 
+        //Sign Up Here Button
         private void AdminLogin_Click(object sender, RoutedEventArgs e)
         {
             AdminLogin adminlogin = new AdminLogin();
             adminlogin.Show();
             Close();
+        }
+
+        //TEST: Account Pop-Out Button for homepage, cert, qr, & etc
+        private void btnClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+        }
+
+        private void btnShowPopup_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == btnShowPopup)
+            {
+
+                myPopup.IsOpen = true;
+            }
         }
     }
 }
