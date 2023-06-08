@@ -43,32 +43,18 @@ namespace WpfApp1
             }
             else
             {
-                string email = textBoxEmail.Text;
-                string password = passwordBox1.Password;
-
-                SqlConnection con = new SqlConnection("Data Source=TESTPURU;Initial Catalog=Data;User ID=sa;Password=wintellect");
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Select * from Registration where Email='" + email + "'  and password='" + password + "'", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
-
-                if (dataSet.Tables[0].Rows.Count > 0)
+                using (var db = new DataContext())
                 {
-                    string username = dataSet.Tables[0].Rows[0]["FirstName"].ToString() + " " + dataSet.Tables[0].Rows[0]["LastName"].ToString();
+                    // var list = (from u in db.user select u).ToList();
 
-                    //For homepage
-                    // welcome.TextBlockName.Text = username;//Sending value from one form to another form.  
-                    //welcome.Show();
-                    //Close();
+                    UserLogin userlogin = new UserLogin();
+                    userlogin.Email = textBoxEmail.Text;
+                    userlogin.Password = passwordBox1.Password;
+
+                    db.UserLogin.Add(userlogin);
+
+                    db.SaveChanges();
                 }
-                else
-                {
-                    errormessage.Text = "Sorry! Please enter existing emailid/password.";
-                }
-                con.Close();
             }
         }
         private void buttonRegister_Click(object sender, RoutedEventArgs e)
