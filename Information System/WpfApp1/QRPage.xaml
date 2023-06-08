@@ -29,9 +29,29 @@
         </ControlTemplate>
     </Window.Resources>
 
-    <Grid Margin="0,0,-6,0">
+
+    <StackPanel Margin="20">
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image HorizontalAlignment="Left" Height="60" 
+               Source="/Resources/images/NZ Gov Logo.png"/>
+
+            <Image
+                Grid.Column="1"
+                HorizontalAlignment="Right" Height="44"  Width="173"
+               Source="/Resources/images/NZ Gov.png"/>
+
+        </Grid>
+    </StackPanel>
+    <!--<Grid Margin="0,0,-6,0">
         <Image HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="56"
                Source="/Resources/images/NZ Gov Logo.png" Margin="24,26,0,0"/>
+
+
         <Image HorizontalAlignment="Right" Height="44" VerticalAlignment="Top" Width="173" Margin="0,26,36.6,0"
                Source="/Resources/images/NZ Gov.png"/>
 
@@ -48,13 +68,16 @@
             <Image Source="/Resources/images/searchbutton.png" RenderTransformOrigin="0.674,-0.028"></Image>
         </Button>
 
-        <Button Name="btnShowPopup" Content="Account" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="1275,329,0,0" Height="36" Click="btnShowPopup_Click" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto" Grid.Column="1">
+        <Button Name="btnShowPopup" Content="Account" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="1275,329,0,0" Height="36" 
+                Click="btnShowPopup_Click" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto" Grid.Column="1">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="8"/>
                 </Style>
             </Button.Resources>
         </Button>
+
+
 
         <Popup AllowsTransparency="True" HorizontalOffset="1cm" x:Name="myPopup" 
                    Placement="Right" StaysOpen="True" Margin="1011,264,44.6,519.4">
@@ -96,7 +119,7 @@
                 </DockPanel>
             </Border>
         </Popup>
-        
+
         <Label Content="Your QR Code: " HorizontalAlignment="Left" Height="50" Margin="55,390,0,0" 
             VerticalAlignment="Top" Width="330" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
 
@@ -129,5 +152,5 @@
         <Label Content="My Covid Record QR Code" HorizontalAlignment="Left" Height="41" Margin="630,614,0,0" 
             VerticalAlignment="Top" Width="260" FontFamily="Inter" FontWeight="Bold" FontSize="20"/>
 
-    </Grid>
+    </Grid>-->
 </Window>
