@@ -48,7 +48,7 @@
             <Image Source="/Resources/images/searchbutton.png" RenderTransformOrigin="0.674,-0.028"></Image>
         </Button>
 
-        <Button  Content="Account" Name="btnShowPopup" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Margin="1248,330,0,0" Height="34" Click="btnShowPopup_Click"  BorderThickness="0"  Background="White" FontFamily="Roboto" FontSize="25">
+        <Button Name="btnShowPopup" Content="Account" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="1275,329,0,0" Height="36" Click="btnShowPopup_Click" FontSize="25" BorderThickness="0"  Background="White" FontFamily="Roboto" Grid.Column="1">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="8"/>
@@ -96,6 +96,7 @@
                 </DockPanel>
             </Border>
         </Popup>
+        
         <Label Content="Your QR Code: " HorizontalAlignment="Left" Height="50" Margin="55,390,0,0" 
             VerticalAlignment="Top" Width="330" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
 

@@ -45,12 +45,6 @@ namespace WpfApp1
             {
                 using (var db = new DataContext())
                 {
-                    // var list = (from u in db.user select u).ToList();
-
-                    //User userlogin = new User();
-                    //userlogin.Email = textBoxEmail.Text;
-                    //userlogin.Password = passwordBox1.Password;
-
                     User isUserThere = db.Users.Where(
                         x => x.Email == textBoxEmail.Text &&
                         x.Password == passwordBox1.Password
@@ -64,8 +58,13 @@ namespace WpfApp1
                     }
                     else
                     {
-                        Homepage homepage = new Homepage();
-                        homepage.Show();
+                        //Homepage homepage = new Homepage();
+                        //homepage.Show();
+                        //Close();
+
+                        //For Testing Account Button
+                        QRPage qrpage = new QRPage();
+                        qrpage.Show();
                         Close();
                     }
 
@@ -85,21 +84,6 @@ namespace WpfApp1
             AdminLogin adminlogin = new AdminLogin();
             adminlogin.Show();
             Close();
-        }
-
-        //TEST: Account Pop-Out Button for homepage, cert, qr, & etc
-        private void btnClosePopup_Click(object sender, RoutedEventArgs e)
-        {
-            myPopup.IsOpen = false;
-        }
-
-        private void btnShowPopup_Click(object sender, RoutedEventArgs e)
-        {
-            if (sender == btnShowPopup)
-            {
-
-                myPopup.IsOpen = true;
-            }
         }
     }
 }
