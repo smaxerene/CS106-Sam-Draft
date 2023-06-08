@@ -90,15 +90,15 @@ namespace WpfApp1
                     {
                         // var list = (from u in db.user select u).ToList();
 
-                        UserRegister userregister = new UserRegister();
+                        User userregister = new User();
                         userregister.FullName = FullNameTextBox.Text;
                         userregister.UserName = UsernameTextBox.Text;
-                        userregister.EmailAdd = EmailTextBox.Text;
+                        userregister.Email = EmailTextBox.Text;
                         userregister.PhoneNo = PhoneTextBox.Text;
                         userregister.Password = PasswordPassBox.Password;
-                        userregister.ConfirmPass = PasswordPassBox.Password;
 
-                        db.UserRegister.Add(userregister);
+
+                        db.Users.Add(userregister);
                         db.SaveChanges();
 
                     }

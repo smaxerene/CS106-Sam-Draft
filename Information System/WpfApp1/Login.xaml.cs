@@ -47,13 +47,28 @@ namespace WpfApp1
                 {
                     // var list = (from u in db.user select u).ToList();
 
-                    UserLogin userlogin = new UserLogin();
-                    userlogin.Email = textBoxEmail.Text;
-                    userlogin.Password = passwordBox1.Password;
+                    //User userlogin = new User();
+                    //userlogin.Email = textBoxEmail.Text;
+                    //userlogin.Password = passwordBox1.Password;
 
-                    db.UserLogin.Add(userlogin);
+                    User isUserThere = db.Users.Where(
+                        x => x.Email == textBoxEmail.Text &&
+                        x.Password == passwordBox1.Password
+                        ).FirstOrDefault();
 
-                    db.SaveChanges();
+                    //Wrong Email or Passwprd
+                    if (isUserThere == null || isUserThere.Email != textBoxEmail.Text || isUserThere.Password != passwordBox1.Password)
+                    {
+                        errormessage.Text = "Incorrect Email or Password.";
+                        textBoxEmail.Focus();
+                    }
+                    else
+                    {
+                        Homepage homepage = new Homepage();
+                        homepage.Show();
+                        Close();
+                    }
+
                 }
             }
         }

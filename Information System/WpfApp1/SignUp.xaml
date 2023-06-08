@@ -8,7 +8,7 @@
         Title="SignUp" Height="1024" Width="1440">
 
     <Grid>
-        <TextBlock Height="36" HorizontalAlignment="Left" Margin="62,396,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247" FontSize="20" OpacityMask="Crimson" Foreground="#FFE5572C" />
+        <TextBlock Height="36" HorizontalAlignment="Left" Margin="62,396,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="318" FontSize="20" OpacityMask="Crimson" Foreground="#FFE5572C" />
 
         <Image HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="78"
                Source="/Resources/images/NZ Gov Logo.png" Margin="59,56,0,0"/>
