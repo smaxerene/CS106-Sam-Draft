@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for QRPage.xaml
+    /// Interaction logic for Certificate.xaml
     /// </summary>
-    public partial class QRPage : Window
+    public partial class Certificate : Window
     {
-        public QRPage()
+        public Certificate()
         {
             InitializeComponent();
         }
@@ -45,9 +45,17 @@ namespace WpfApp1
             }
         }
 
-        private void QR_Click(object sender, RoutedEventArgs e)
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            VaccineDetailsPage details = new VaccineDetailsPage();
+            details.Show();
+            Close();
+        }
+        private void Download_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+
     }
 }

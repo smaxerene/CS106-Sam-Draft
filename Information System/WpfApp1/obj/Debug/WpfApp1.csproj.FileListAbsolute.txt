@@ -200,3 +200,7 @@ C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Info
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\Certificate.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\VaccineDetailsPage.g.cs
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\Certificate.baml
+C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\VaccineDetailsPage.baml
