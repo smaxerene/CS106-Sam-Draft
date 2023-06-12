@@ -1,11 +1,11 @@
-﻿<Window x:Class="WpfApp1.VaccineDetailsPage"
+﻿<Window x:Class="WpfApp1.UserProfile"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="VaccineDetailsPage" Height="1024" Width="1440">
+        Title="UserProfile" Height="1024" Width="1440">
 
     <Window.Resources>
         <ControlTemplate x:Key="RoundTextboxCornerTemplate" TargetType="{x:Type TextBoxBase}">
@@ -138,62 +138,74 @@
 
         <!--My Covid Record-->
         <Grid>
-            <Label Content="Your Vaccine Details " HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
+            <Label Content="Your Profile" HorizontalAlignment="Left" Height="50" FontFamily="Inter" FontWeight="Bold" FontSize="32"/>
         </Grid>
 
-        <!--Edit and Upload Button-->
+        <!--Greeting-->
         <Grid>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="1319*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Resources/images/profile.png" Margin="25,12,10.2,10"/>
+            <TextBlock TextWrapping="Wrap" FontWeight="Medium" Text="Hi, " Grid.ColumnSpan="2" Margin="75,19,1273.6,9.8" FontFamily="Roboto" FontSize="30"/>
+            <!--Name from database-->
+        </Grid>
+
+        <!--Profile-->
+        <Grid>
+            <Rectangle Fill="#FFDD54" HorizontalAlignment="Center" Height="393" Stroke="Black" VerticalAlignment="Top" Width="630" Margin="380,-16,383.6,-0.2" StrokeThickness="0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,29,0,0" FontFamily="Roboto" Height="30" Width="135" FontSize="25"><Run Text="Full Name"/><LineBreak/><Run/></TextBlock>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,24,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,89,0,0" FontFamily="Roboto" Height="30" Width="135" FontSize="25" Text="Username"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,84,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,149,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Email Address"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,144,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,209,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="Phone Number"/>
+            <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="380" Margin="595,204,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left" FontWeight="Medium" TextWrapping="Wrap" VerticalAlignment="Top" Margin="410,274,0,0" FontFamily="Roboto" Height="30" Width="185" FontSize="25" Text="JOINED"/>
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="40" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="425" Margin="550,269,0,0"/>
+
+            <Image Source="/Resources/images/key.png" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="25" Margin="615,333,0,0"/>
+            <Button Content="Forgot Password" Background="#FFDD54" FontWeight="Bold" VerticalAlignment="Top" Margin="640,333,618.6,0" BorderThickness="0" FontFamily="Inter" FontSize="16"/>
+
+
+        </Grid>
+
+        <!--Buttons-->
+        <Grid Height="122" Margin="0,0,-0.4,0">
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="20">
-                <TextBlock TextAlignment="Center"  FontFamily="Inter" FontWeight="Regular" FontSize="18" Text="All documents displayed below have been approved by the administrator."></TextBlock>
-
-                <Button Content="Edit and Upload Details" FontWeight="Medium" Width="300"  Background="Black" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Margin="0,20,0,0" Click="EditUpload_Click">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="8"></Setter>
-                        </Style>
-                    </Button.Resources>
-                </Button>
+            <StackPanel Margin="6.8,25,23.2,25" Orientation="Horizontal" Grid.Column="1">
+                <Grid Margin="5">
+                    <Button Content="Edit Profile" FontWeight="Medium" Width="210"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="8"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+                <Grid Margin="5">
+                    <Button Content="Save Profile" FontWeight="Medium" Width="205"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Margin="0,0,0,-0.4">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="8"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
             </StackPanel>
         </Grid>
 
-        <!--Details-->
-        <Grid>
-            <Rectangle Fill="#FFCC00" Height="450" Stroke="Black" VerticalAlignment="Top" Width="1074"/>
-            <Rectangle Fill="white" HorizontalAlignment="Left" Height="385" Stroke="Black" VerticalAlignment="Top" Width="1005" Margin="195,34,0,0"/>
-
-            <Grid>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="COVID-19 Vaccine" FontWeight="Medium" VerticalAlignment="Top" Margin="210,49,0,0" FontFamily="Roboto" FontSize="16"/>
-
-                <Grid>
-                    <Image HorizontalAlignment="Left" Height="16" VerticalAlignment="Top" Width="100"/>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="1st Dose" VerticalAlignment="Top" Margin="225,87,0,0"/>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="250,108,0,0" FontFamily="Roboto"/>
-
-                    <Button Content="Button" Width="80" Margin="1095,89,218.6,331.6"/>
-
-
-                </Grid>
-
-
-            </Grid>
-
-
-            <Button Content="Generate Certificate" FontWeight="Medium" Width="205"  Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="34" FontSize="16" UseLayoutRounding="True" BorderThickness="0" Margin="590,355,598.6,60.6" Click="GenerateCert_Click">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="8"></Setter>
-                    </Style>
-                </Button.Resources>
-            </Button>
-        </Grid>
-
-
     </StackPanel>
-
 </Window>

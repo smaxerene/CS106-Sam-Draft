@@ -40,30 +40,6 @@ namespace WpfApp1 {
     /// </summary>
     public partial class Window1 : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
-        
-        #line 16 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock errormessage;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 30 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox textBoxEmail;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 32 "..\..\Window1.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.PasswordBox passwordBox1;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -92,40 +68,6 @@ namespace WpfApp1 {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
-            switch (connectionId)
-            {
-            case 1:
-            this.errormessage = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 2:
-            this.textBoxEmail = ((System.Windows.Controls.TextBox)(target));
-            
-            #line 30 "..\..\Window1.xaml"
-            this.textBoxEmail.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.TextBox_TextChanged_2);
-            
-            #line default
-            #line hidden
-            return;
-            case 3:
-            this.passwordBox1 = ((System.Windows.Controls.PasswordBox)(target));
-            return;
-            case 4:
-            
-            #line 33 "..\..\Window1.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 5:
-            
-            #line 36 "..\..\Window1.xaml"
-            ((System.Windows.Documents.Hyperlink)(target)).Click += new System.Windows.RoutedEventHandler(this.buttonRegister_Click);
-            
-            #line default
-            #line hidden
-            return;
-            }
             this._contentLoaded = true;
         }
     }
