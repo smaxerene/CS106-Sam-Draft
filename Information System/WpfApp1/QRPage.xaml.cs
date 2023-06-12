@@ -67,7 +67,7 @@ namespace WpfApp1
             Close();
         }
 
-        /*
+
         private void GenerateQRCode_Click(object sender, RoutedEventArgs e)
         {
             string inputData = txtInput.Text.Trim();
@@ -124,6 +124,6 @@ namespace WpfApp1
             {
                 MessageBox.Show($"Error saving QR code: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        } */
+        }
     }
 }
