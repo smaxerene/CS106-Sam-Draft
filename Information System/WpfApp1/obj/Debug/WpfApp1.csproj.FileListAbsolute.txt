@@ -205,3 +205,19 @@ C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Info
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\Certificate.baml
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\VaccineDetailsPage.baml
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\UserProfile.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\AdminLogin.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\Certificate.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\Homepage.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\Login.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\QRPage.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\SignUp.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\UserProfile.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\VaccineDetailsPage.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Samantha\Desktop\Draft\CS106-Sam-Draft\Information System\WpfApp1\obj\Debug\WpfApp1.pdb
