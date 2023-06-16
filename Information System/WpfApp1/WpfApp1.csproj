@@ -151,14 +151,8 @@
       <DependentUpon>Certificate.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataContext.cs" />
-    <Compile Include="Homepage.xaml.cs">
-      <DependentUpon>Homepage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="QRPage.xaml.cs">
-      <DependentUpon>QRPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
@@ -174,10 +168,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Certificate.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Homepage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,10 +187,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="QRPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="SignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

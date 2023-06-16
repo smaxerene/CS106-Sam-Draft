@@ -5,42 +5,171 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="SignUp" Height="1024" Width="1440">
+        Title="SignUp" WindowState="Maximized">
 
-    <Grid>
-        <TextBlock Height="36" HorizontalAlignment="Left" Margin="62,396,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="318" FontSize="20" OpacityMask="Crimson" Foreground="#FFE5572C" />
+    <Window.Resources>
+        <!--Textbox design-->
+        <ControlTemplate x:Key="RoundTextboxCornterTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}"   
+         x:Name="Bd" BorderBrush="Black"  
+         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
 
-        <Image HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="78"
-               Source="/Resources/images/NZ Gov Logo.png" Margin="59,56,0,0"/>
-        <Image HorizontalAlignment="Left" Height="83" VerticalAlignment="Top" Width="322" Margin="1056,56,0,0"
-               Source="/Resources/images/NZ Gov.png"/>
+        <!--Password textbox design-->
+        <Style TargetType="PasswordBox" x:Key="roundcornerpassword">
+            <Setter Property="PasswordChar" Value="●"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border Background="{TemplateBinding Background}"   
+                        x:Name="Bd" BorderBrush="Black"  
+                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                            <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="PART_ContentHost" Template="{DynamicResource ScrollViewerControlTemplate1}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <ScrollViewer>
 
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Welcome To" VerticalAlignment="Center" Margin="638,136,0,834.4" Height="24" Width="132" FontFamily="Inter" FontSize="18" TextAlignment="Center"/>
-        <Image HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="164" RenderTransformOrigin="3.592,3.258" Margin="620,179,0,0"
-               Source="/Resources/images/My Covid Record Logo.png"/>
-        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="Wrap" Text="My Covid Record" VerticalAlignment="Top" Margin="309,317,358.6,0" FontFamily="Inter" Width="766" FontSize="80" TextAlignment="Center"/>
+        <StackPanel Margin="20">
+          
+            <!--NZ Government Logo-->
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-        <Rectangle Fill="#3A89FF" HorizontalAlignment="Left" Height="344" Margin="303,437,0,0" Stroke="Black" VerticalAlignment="Top" Width="870" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
-        <Rectangle Fill="#6194E0" HorizontalAlignment="Left" Height="344" Margin="303,437,0,0" Stroke="Black" VerticalAlignment="Top" Width="245" Opacity="0.8" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
+                <Image HorizontalAlignment="Left" Height="60" 
+               Source="/Resources/images/NZ Gov Logo.png"/>
 
-        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Full Name" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="323,476,0,0" FontFamily="Roboto" FontSize="24"/>
-        <TextBox Name="FullNameTextBox" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="552" Margin="578,472,0,0" FontSize="24" FontFamily="Roboto" BorderThickness="0" RenderTransformOrigin="0.5,0.5"/>
+                <Image Grid.Column="1" HorizontalAlignment="Right" Height="44" Source="/Resources/images/NZ Gov.png"/>
+            </Grid>
 
-        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="323,525,0,0" FontFamily="Roboto" FontSize="24"/>
-        <TextBox Name="UsernameTextBox" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="552" Margin="578,518,0,0" FontSize="24" FontFamily="Roboto" BorderThickness="0" RenderTransformOrigin="0.5,0.5"/>
+            <!--My Covid Record-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email Address" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="323,570,0,0" FontFamily="Roboto" FontSize="24"/>
-        <TextBox Name="EmailTextBox" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="552" Margin="578,563,0,0" FontSize="24" FontFamily="Roboto" BorderThickness="0" RenderTransformOrigin="0.5,0.5"/>
+                <StackPanel Grid.Column="1" Orientation="Vertical">
+                    <TextBlock  TextWrapping="Wrap" Text="Welcome To"  Height="24" Width="132" FontFamily="Inter" FontSize="18" TextAlignment="Center"/>
+                    <Image Height="151" Width="164" Source="/Resources/images/My Covid Record Logo.png"/>
+                    <TextBlock FontWeight="Bold" Text="My Covid Record" VerticalAlignment="Top" FontFamily="Inter" Width="766" FontSize="80" TextAlignment="Center"/>
+                </StackPanel>
+            </Grid>
 
-        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Phone Number" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="323,615,0,0" FontFamily="Roboto" FontSize="24"/>
-        <TextBox Name="PhoneTextBox" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="552" Margin="578,608,0,0" FontSize="24" FontFamily="Roboto" BorderThickness="0" RenderTransformOrigin="0.5,0.5"/>
+            <!--Insert Information-->
+            <Grid>
+               
+                <TextBlock Height="36" HorizontalAlignment="Left"  x:Name ="errormessage" VerticalAlignment="Top" Width="318" FontSize="20" OpacityMask="Crimson" Foreground="#FFE5572C" />
 
-        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="323,661,0,0" FontFamily="Roboto" FontSize="24"/>
-        <PasswordBox Name="PasswordPassBox" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="578,654,0,0" Width="552" Height="36"/>
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-        <TextBlock FontWeight="Medium" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Confirm Password" VerticalAlignment="Top" RenderTransformOrigin="4.073,14.231" Margin="323,706,0,0" FontFamily="Roboto" FontSize="24"/>
-        <PasswordBox Name="ConfirmPassPassBox" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="578,699,0,0" Width="552" Height="36"/>
 
+                    <Grid Margin="0,20,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="1">
+                            <Rectangle Fill="#3A89FF" Height="300"  Stroke="Black"  Width="770" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
+                            <Rectangle Fill="#6194E0"  HorizontalAlignment="Left" Height="300" Stroke="Black" Width="245" Opacity="0.8" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
+
+                            <StackPanel Orientation="Horizontal">
+                                <Grid Margin="0,0,0,0" Width="240" Height="242">
+                                    <StackPanel Margin="20,0,0,0">
+                                        <Grid>
+                                            <TextBlock FontWeight="Medium" Text="Full Name" FontFamily="Roboto" FontSize="24"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,8,0,0">
+                                            <TextBlock FontWeight="Medium" Text="Username" FontFamily="Roboto" FontSize="24"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,8,0,0">
+                                            <TextBlock FontWeight="Medium" Text="Email Address" FontFamily="Roboto" FontSize="24"/>
+                                        </Grid>
+
+                                        <Grid >
+                                            <TextBlock FontWeight="Medium" Text="Phone Number"  FontFamily="Roboto" FontSize="24"/>
+                                        </Grid>
+                                        
+                                        <Grid>
+                                            <TextBlock FontWeight="Medium" Text="Password" FontFamily="Roboto" FontSize="24"/>
+
+                                        </Grid>
+
+                                        <Grid>
+                                            <TextBlock FontWeight="Medium" Text="Confirm Password" FontFamily="Roboto" FontSize="24"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
+
+                                <Grid Margin="20,0,0,0">
+                                    <StackPanel>
+                                        <TextBox Name="FullNameTextBox"  Height="36" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        <TextBox Name="UsernameTextBox" Height="36" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        <TextBox Name="EmailTextBox" Height="36" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        <TextBox Name="PhoneTextBox" Height="36"  Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" />
+                                        <PasswordBox Name="PasswordPassBox" FontSize="25" Height="36" Style="{StaticResource roundcornerpassword}"/>
+                                        <PasswordBox Name="ConfirmPassPassBox" FontSize="25" Width="500" Height="36" Style="{StaticResource roundcornerpassword}"/>
+                                    </StackPanel>
+                                </Grid>
+
+                            </StackPanel>
+                            
+                        </Grid>
+
+                      
+                    </Grid>
+                    
+                </Grid>
+            </Grid>
+            
+        </StackPanel>
+    </ScrollViewer>
+</Window>
+    
+        <!--
         <Button Name="Submit" Content="Submit" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="292" Margin="228,819,0,0" Background="Black" Foreground="White" FontFamily="Roboto" Height="44" Click="Submit_Click" FontSize="16">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -73,5 +202,4 @@
             </Button.Resources>
         </Button>
 
-    </Grid>
-</Window>
+   -->

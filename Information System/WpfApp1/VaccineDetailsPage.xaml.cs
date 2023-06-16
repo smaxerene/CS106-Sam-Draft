@@ -26,9 +26,9 @@ namespace WpfApp1
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            Homepage homepage = new Homepage();
-            homepage.Show();
-            Close();
+            //Homepage homepage = new Homepage();
+            //homepage.Show();
+            //Close();
         }
 
         //Account 
