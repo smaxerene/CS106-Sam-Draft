@@ -44,7 +44,6 @@
                         <Border Background="{TemplateBinding Background}"   
                         x:Name="Bd" BorderBrush="Black"  
                         BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
-                            <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="PART_ContentHost" Template="{DynamicResource ScrollViewerControlTemplate1}"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsEnabled" Value="false">
@@ -57,11 +56,11 @@
             </Setter>
         </Style>
     </Window.Resources>
-    
+
     <ScrollViewer>
 
         <StackPanel Margin="20">
-          
+
             <!--NZ Government Logo-->
             <Grid >
                 <Grid.ColumnDefinitions>
@@ -92,7 +91,7 @@
 
             <!--Insert Information-->
             <Grid>
-               
+
                 <TextBlock Height="36" HorizontalAlignment="Left"  x:Name ="errormessage" VerticalAlignment="Top" Width="318" FontSize="20" OpacityMask="Crimson" Foreground="#FFE5572C" />
 
                 <Grid Margin="0,20,0,0">
@@ -111,12 +110,12 @@
                         </Grid.ColumnDefinitions>
 
                         <Grid Grid.Column="1">
-                            <Rectangle Fill="#3A89FF" Height="300"  Stroke="Black"  Width="770" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
-                            <Rectangle Fill="#6194E0"  HorizontalAlignment="Left" Height="300" Stroke="Black" Width="245" Opacity="0.8" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
+                            <Rectangle Fill="#3A89FF" Height="250"  Stroke="Black"  Width="770" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
+                            <Rectangle Fill="#6194E0"  HorizontalAlignment="Left" Height="250" Stroke="Black" Width="245" Opacity="0.8" StrokeThickness="0" RadiusX="19.6" RadiusY="20" />
 
                             <StackPanel Orientation="Horizontal">
-                                <Grid Margin="0,0,0,0" Width="240" Height="242">
-                                    <StackPanel Margin="20,0,0,0">
+                                <Grid  Width="240" Height="242">
+                                    <StackPanel Margin="20,15,0,0">
                                         <Grid>
                                             <TextBlock FontWeight="Medium" Text="Full Name" FontFamily="Roboto" FontSize="24"/>
                                         </Grid>
@@ -129,77 +128,115 @@
                                             <TextBlock FontWeight="Medium" Text="Email Address" FontFamily="Roboto" FontSize="24"/>
                                         </Grid>
 
-                                        <Grid >
+                                        <Grid Margin="0,8,0,0">
                                             <TextBlock FontWeight="Medium" Text="Phone Number"  FontFamily="Roboto" FontSize="24"/>
                                         </Grid>
-                                        
-                                        <Grid>
+
+                                        <Grid Margin="0,8,0,0">
                                             <TextBlock FontWeight="Medium" Text="Password" FontFamily="Roboto" FontSize="24"/>
 
                                         </Grid>
 
-                                        <Grid>
+                                        <Grid Margin="0,8,0,0">
                                             <TextBlock FontWeight="Medium" Text="Confirm Password" FontFamily="Roboto" FontSize="24"/>
                                         </Grid>
                                     </StackPanel>
                                 </Grid>
 
-                                <Grid Margin="20,0,0,0">
-                                    <StackPanel>
-                                        <TextBox Name="FullNameTextBox"  Height="36" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
-                                        <TextBox Name="UsernameTextBox" Height="36" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
-                                        <TextBox Name="EmailTextBox" Height="36" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
-                                        <TextBox Name="PhoneTextBox" Height="36"  Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" />
-                                        <PasswordBox Name="PasswordPassBox" FontSize="25" Height="36" Style="{StaticResource roundcornerpassword}"/>
-                                        <PasswordBox Name="ConfirmPassPassBox" FontSize="25" Width="500" Height="36" Style="{StaticResource roundcornerpassword}"/>
+                                <Grid>
+                                    <StackPanel Margin="20,15,0,0">
+                                        <Grid>
+                                            <TextBox Name="FullNameTextBox"  Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,8,0,0">
+                                            <TextBox Name="UsernameTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,8,0,0">
+                                            <TextBox Name="EmailTextBox" Height="30" Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,8,0,0">
+                                            <TextBox Name="PhoneTextBox" Height="30"  Width="500" FontSize="24" FontFamily="Roboto" BorderThickness="0" Template="{StaticResource RoundTextboxCornterTemplate}" />
+                                        </Grid>
+
+                                        <Grid Margin="0,8,0,0">
+                                            <PasswordBox Name="PasswordPassBox" FontSize="25" Height="30" Style="{StaticResource roundcornerpassword}"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,8,0,0">
+                                            <PasswordBox Name="ConfirmPassPassBox" FontSize="25" Width="500" Height="30" Style="{StaticResource roundcornerpassword}"/>
+                                        </Grid>
+
                                     </StackPanel>
                                 </Grid>
 
                             </StackPanel>
-                            
-                        </Grid>
 
-                      
+                        </Grid>
                     </Grid>
-                    
                 </Grid>
             </Grid>
-            
+
+            <!--Buttons-->
+            <Grid Margin="0,40,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Grid Margin="5,0,5,0">
+                        <Button Name="Submit" Content="Submit" FontWeight="Medium" Width="200" Background="Black" Foreground="White" FontFamily="Roboto" Height="44" Click="Submit_Click" FontSize="16">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+
+                    <Grid  Margin="5,0,5,0">
+                        <Button Name="ResetButton" Content="Reset" FontWeight="Medium" Width="200" Background="Black" Foreground="White" FontFamily="Roboto" Height="44" Click="Reset_Click" FontSize="16">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+
+                    <Grid  Margin="5,0,5,0">
+                        <Button Name="Cancel" Content="Cancel" FontWeight="Medium" Width="200" Background="Black" Foreground="White" FontFamily="Roboto" Height="44" Click="Cancel_Click" FontSize="16">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <!--Login Button-->
+            <Grid Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="Login" Click="Login_Click" Content="Login"  Grid.Column="1" FontWeight="Medium" Width="250" Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="44" FontSize="16">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+
         </StackPanel>
     </ScrollViewer>
 </Window>
-    
-        <!--
-        <Button Name="Submit" Content="Submit" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="292" Margin="228,819,0,0" Background="Black" Foreground="White" FontFamily="Roboto" Height="44" Click="Submit_Click" FontSize="16">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="8"></Setter>
-                </Style>
-            </Button.Resources>
-        </Button>
-
-        <Button Name="ResetButton" Content="Reset" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="292" Margin="578,819,0,0" Background="Black" Foreground="White" FontFamily="Roboto" Height="44" Click="Reset_Click" FontSize="16">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="8"></Setter>
-                </Style>
-            </Button.Resources>
-        </Button>
-
-        <Button Name="Cancel" Content="Cancel" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="292" Margin="923,819,0,0" Background="Black" Foreground="White" FontFamily="Roboto" Height="44" Click="Cancel_Click" FontSize="16">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="8"></Setter>
-                </Style>
-            </Button.Resources>
-        </Button>
-
-        <Button Name="Login" Click="Login_Click" Content="Login" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="445" Margin="515,900,0,0" Background="#3A89FF" Foreground="White" FontFamily="Roboto" Height="44" FontSize="16">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="8"></Setter>
-                </Style>
-            </Button.Resources>
-        </Button>
-
-   -->

@@ -62,9 +62,9 @@ namespace WpfApp1
                         //homepage.Show();
                         //Close();
 
-                        //For Testing Account Button
-                        QRPage qrpage = new QRPage();
-                        qrpage.Show();
+                        //Test
+                        VaccineDetailsPage details = new VaccineDetailsPage();
+                        details.Show();
                         Close();
                     }
 
