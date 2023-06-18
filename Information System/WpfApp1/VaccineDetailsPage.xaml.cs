@@ -131,7 +131,7 @@ namespace WpfApp1
             public string Vaccine { get; set; }
             public string Brand { get; set; }
             public string Country { get; set; }
-        }
+        } 
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
             //Certificate certificate = new Certificate();
