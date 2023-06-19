@@ -10,25 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace WpfApp1.Views
 {
     /// <summary>
-    /// Interaction logic for Certificate.xaml
+    /// Interaction logic for UserProfile.xaml
     /// </summary>
-    public partial class Certificate : Window
+    public partial class UserProfile : Page
     {
-        public Certificate()
+        public UserProfile()
         {
             InitializeComponent();
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            Homepage homepage = new Homepage();
-            homepage.Show();
-            Close();
+            App.Current.MainWindow.Content = new Homepage();
         }
 
         //Account 
@@ -47,37 +46,17 @@ namespace WpfApp1
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            UserProfile userprofile = new UserProfile();
-            userprofile.Show();
-            Close();
+            App.Current.MainWindow.Content = new UserProfile();
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
         {
-            QRPage qrpage = new QRPage();
-            qrpage.Show();
-            Close();
+            App.Current.MainWindow.Content = new QRPage();
         }
 
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
-            Certificate certificate = new Certificate();
-            certificate.Show();
-            Close();
+            App.Current.MainWindow.Content = new Certificate();
         }
-
-        //Buttons
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-            VaccineDetailsPage details = new VaccineDetailsPage();
-            details.Show();
-            Close();
-        }
-        private void Download_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
     }
 }

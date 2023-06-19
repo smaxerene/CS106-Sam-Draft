@@ -15,12 +15,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace My_Covid_Record
+namespace WpfApp1.Views
 {
     /// <summary>
     /// Interaction logic for Homepage.xaml
     /// </summary>
-    public partial class Homepage : Window, INotifyPropertyChanged
+    public partial class Homepage : Page, INotifyPropertyChanged
     {
         public Homepage()
         {

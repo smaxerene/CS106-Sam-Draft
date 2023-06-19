@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,27 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace WpfApp1.Views
 {
     /// <summary>
     /// Interaction logic for VaccineDetailsPage.xaml
     /// </summary>
-    public partial class VaccineDetailsPage : Window
+    public partial class VaccineDetailsPage : Page
     {
-        ObservableCollection<UserDetails> UserDetail = new ObservableCollection<UserDetails>();
+
         public VaccineDetailsPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = UserDetail;
+            ListView.ItemsSource = UserDetails;
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            //Homepage homepage = new Homepage();
-            //homepage.Show();
-            //Close();
+            App.Current.MainWindow.Content = new Homepage();
         }
 
         //Account 
@@ -50,31 +48,41 @@ namespace WpfApp1
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            //UserProfile userprofile = new UserProfile();
-            //userprofile.Show();
-            //Close();
+            App.Current.MainWindow.Content = new UserProfile();
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
         {
-            //QRPage qrpage = new QRPage();
-            //qrpage.Show();
-            //Close();
+            App.Current.MainWindow.Content = new QRPage();
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            UserDetail.Add(new UserDetails()
+            using (var db = new DataContext())
             {
-                DoseNo = Dose.Text,
-                Date = Date.Text,
-                Vaccine = Vaccine.Text,
-                Brand = Brand.Text,
-                Country = Country.Text
-            });
+                // var list = (from u in db.user select u).ToList();
 
-            Reset();
+                UserDetails userdetail = new UserDetails();
 
+                userdetail.DoseNo = Dose.Text;
+                userdetail.Date = Date.Text;
+                userdetail.Vaccine = Vaccine.Text;
+                userdetail.Brand = Brand.Text;
+                userdetail.Country = Country.Text;
+
+                userdetail.Add(new UserDetails()
+                {
+                    DoseNo = Dose.Text,
+                    Date = Date.Text,
+                    Vaccine = Vaccine.Text,
+                    Brand = Brand.Text,
+                    Country = Country.Text
+                });
+
+                db.UserDetails.Add(userdetail);
+                db.SaveChanges();
+                Reset();
+            }
         }
 
         private void New_Click(object sender, RoutedEventArgs e)
@@ -124,19 +132,9 @@ namespace WpfApp1
             }
         }
 
-        public class UserDetails
-        {
-            public string DoseNo { get; set; }
-            public string Date { get; set; }
-            public string Vaccine { get; set; }
-            public string Brand { get; set; }
-            public string Country { get; set; }
-        } 
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
-            //Certificate certificate = new Certificate();
-            //certificate.Show();
-            //Close();
+            App.Current.MainWindow.Content = new Certificate();
         }
 
         //Buttons
@@ -147,9 +145,7 @@ namespace WpfApp1
 
         private void GenerateCert_Click(object sender, RoutedEventArgs e)
         {
-            //Certificate certificate = new Certificate();
-            //certificate.Show();
-            //Close();
+            App.Current.MainWindow.Content = new Certificate();
         }
     }
 }

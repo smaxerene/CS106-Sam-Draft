@@ -10,15 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
 
-namespace WpfApp1
+namespace WpfApp1.Views
 {
     /// <summary>
     /// Interaction logic for QRPage.xaml
     /// </summary>
-    public partial class QRPage : Window
+    public partial class QRPage : Page
     {
         public QRPage()
         {
@@ -27,9 +27,7 @@ namespace WpfApp1
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            //Homepage homepage = new Homepage();
-            //homepage.Show();
-            //Close();
+            App.Current.MainWindow.Content = new Homepage();
         }
 
         //Account 
@@ -48,23 +46,18 @@ namespace WpfApp1
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            //UserProfile userprofile = new UserProfile();
-            //userprofile.Show();
-            //Close();
+            App.Current.MainWindow.Content = new UserProfile();
+
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
         {
-            QRPage qrpage = new QRPage();
-            qrpage.Show();
-            Close();
+
         }
 
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
-            //Certificate certificate = new Certificate();
-            //certificate.Show();
-            //Close();
+            App.Current.MainWindow.Content = new Certificate();
         }
 
 
@@ -98,32 +91,32 @@ namespace WpfApp1
 
         private void DownloadQRCode_Click(object sender, RoutedEventArgs e)
         {
-        //    if (imgQRCode.Source == null)
-        //    {
-        //        MessageBox.Show("Please generate the QR code first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-        //        return;
-        //    }
+            //    if (imgQRCode.Source == null)
+            //    {
+            //        MessageBox.Show("Please generate the QR code first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        return;
+            //    }
 
-        //    BitmapSource bitmapSource = (BitmapSource)imgQRCode.Source;
-        //    PngBitmapEncoder encoder = new PngBitmapEncoder();
-        //    encoder.Frames.Add(BitmapFrame.Create(bitmapSource));
+            //    BitmapSource bitmapSource = (BitmapSource)imgQRCode.Source;
+            //    PngBitmapEncoder encoder = new PngBitmapEncoder();
+            //    encoder.Frames.Add(BitmapFrame.Create(bitmapSource));
 
-        //    string fileName = "QRCode.png"; // Change the file name and extension as desired
-        //    string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName);
+            //    string fileName = "QRCode.png"; // Change the file name and extension as desired
+            //    string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fileName);
 
-        //    try
-        //    {
-        //        using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
-        //        {
-        //            encoder.Save(fileStream);
-        //        }
+            //    try
+            //    {
+            //        using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
+            //        {
+            //            encoder.Save(fileStream);
+            //        }
 
-        //        MessageBox.Show($"QR code saved successfully: {filePath}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error saving QR code: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-        //    }
+            //        MessageBox.Show($"QR code saved successfully: {filePath}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show($"Error saving QR code: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    }
         }
     }
 }

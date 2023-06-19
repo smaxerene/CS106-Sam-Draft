@@ -10,25 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace WpfApp1.Views
 {
     /// <summary>
-    /// Interaction logic for UserProfile.xaml
+    /// Interaction logic for Certificate.xaml
     /// </summary>
-    public partial class UserProfile : Window
+    public partial class Certificate : Page
     {
-        public UserProfile()
+        public Certificate()
         {
             InitializeComponent();
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            Homepage homepage = new Homepage();
-            homepage.Show();
-            Close();
+            App.Current.MainWindow.Content = new Homepage();
         }
 
         //Account 
@@ -47,23 +46,27 @@ namespace WpfApp1
 
         private void PersonalDeets_Click(object sender, RoutedEventArgs e)
         {
-            UserProfile userprofile = new UserProfile();
-            userprofile.Show();
-            Close();
+            App.Current.MainWindow.Content = new UserProfile();
         }
 
         private void GenerateQR_Click(object sender, RoutedEventArgs e)
         {
-            QRPage qrpage = new QRPage();
-            qrpage.Show();
-            Close();
+            App.Current.MainWindow.Content = new QRPage();
         }
 
         private void Certficate_Click(object sender, RoutedEventArgs e)
         {
-            Certificate certificate = new Certificate();
-            certificate.Show();
-            Close();
+            App.Current.MainWindow.Content = new Certificate();
+        }
+
+        //Buttons
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Download_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

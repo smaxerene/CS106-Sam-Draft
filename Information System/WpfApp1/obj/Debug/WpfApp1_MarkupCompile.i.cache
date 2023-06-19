@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\270233431\OneDrive - UP Education\Documents\GitHub\CS106-Sam-Draft\Information System\WpfApp1\App.xaml
-91887534065
+8-1048538446
 
-15-528911588
+14-1477587797
 45-533760811
-AdminLogin.xaml;Certificate.xaml;Homepage.xaml;MainWindow.xaml;QRPage.xaml;UserProfile.xaml;VaccineDetailsPage.xaml;Views\Users\Login.xaml;Views\Users\SignUp.xaml;
+Views\AdminLogin.xaml;Views\Certificate.xaml;Views\Homepage.xaml;Views\Login.xaml;Views\QRPage.xaml;Views\SignUp.xaml;Views\UserProfile.xaml;Views\VaccineDetailsPage.xaml;
 
-False
+True
 

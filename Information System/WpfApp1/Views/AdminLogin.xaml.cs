@@ -10,18 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace WpfApp1.Views.Admin
 {
     /// <summary>
     /// Interaction logic for AdminLogin.xaml
     /// </summary>
-    public partial class AdminLogin : Window
+    public partial class AdminLogin : Page
     {
         public AdminLogin()
         {
             InitializeComponent();
+            int abc = 0;
         }
     }
 }
